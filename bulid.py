@@ -25,8 +25,8 @@ for folder_path, _, files in os.walk(current_directory):
             # 生成Markdown表格行
             table_content += f"| {file_link} | **描述** | {jd_link} | {dangdang_link} |\n"
 
-# 写入到README.md
-with open("README.md", "w") as readme_file:
+# 写入到README.md（设置编码为UTF-8）
+with open("README.md", "w", encoding="utf-8") as readme_file:
     readme_file.write(table_content)
 
 print("README.md generated successfully.")
